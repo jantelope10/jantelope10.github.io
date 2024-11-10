@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metatags containing charset, viewport, webpage description, keywords, and author along with the webpage title.-->
+    <!--Includes imports of the mainelements CSS page and the functions JavaScript page.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All About Jacob Sanchez">
+    <meta name="keywords" content="Places I've Traveled">
+    <meta name="author" content="Jacob Sanchez">
+    <meta name="revised" content="9/24/2024">
+    <meta name="position" content="1">
+    <title>Places I've Traveled</title>
+    <link rel="stylesheet" type="text/css" href="/mywebpage/mainelements.css">
+    <script src="/mywebpage/functions.js"></script>
+</head>
+<style>
+    /*Allows the background of elements to blink yellow and yellowgreen.*/
+    @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                background-color: rgb(201, 248, 107);
+            }
+            100% {
+                opacity: 1;
+            }
+    }
+    /*Allows for changes to display, flex-direction, height, width, background-color, etc.*/
+    /*Separated by classes and ids to specify changes to individual elements.*/
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    .row {
+        height: 250px;
+        width: 400px;
+        background-color: rgb(247, 247, 121);
+        border-radius: 25%;
+        justify-content:space-between;
+        animation: blink 2s infinite;
+    }
+    .row2 {
+        margin-left: 1020px;
+        height: 250px;
+        width: 400px;
+        background-color: rgb(247, 247, 121);
+        border-radius: 25%;
+        justify-content:space-between;
+        animation: blink 2s infinite;
+    }
+    /*Defines each info box that includes information about each destination.*/
+    /*Displayed as 'none' at first until a function makes them appear.*/
+    #infoBox1 {
+        display: none;
+        position: absolute;
+        right:100px;
+        height: 250px;
+        width: 800px;
+        background-color: rgb(247, 247, 121);
+        border-radius: 25%;
+        justify-content:space-between;
+        animation: blink 2s infinite;
+    }
+    #infoBox2 {
+        display: none;
+        position: absolute;
+        right:100px;
+        height: 250px;
+        width: 800px;
+        background-color: rgb(247, 247, 121);
+        border-radius: 25%;
+        justify-content:space-between;
+        animation: blink 2s infinite;
+    }
+    #infoBox3 {
+        display: none;
+        position: absolute;
+        right:100px;
+        height: 250px;
+        width: 800px;
+        background-color: rgb(247, 247, 121);
+        border-radius: 25%;
+        justify-content:space-between;
+        animation: blink 2s infinite;
+    }
+    #infoBox4 {
+        display: none;
+        position: absolute;
+        left:100px;
+        height: 250px;
+        width: 800px;
+        background-color: rgb(247, 247, 121);
+        border-radius: 25%;
+        justify-content:space-between;
+        animation: blink 2s infinite;
+    }
+    #infoBox5 {
+        display: none;
+        position: absolute;
+        left:100px;
+        height: 250px;
+        width: 800px;
+        background-color: rgb(247, 247, 121);
+        border-radius: 25%;
+        justify-content:space-between;
+        animation: blink 2s infinite;
+    }
+    #infoBox6 {
+        display: none;
+        position: absolute;
+        left:100px;
+        height: 250px;
+        width: 800px;
+        background-color: rgb(247, 247, 121);
+        border-radius: 25%;
+        justify-content:space-between;
+        animation: blink 2s infinite;
+    }
+    /*Defines changes to images displayed on this page. Allows absolute positioning for each.*/
+    /*Displayed as 'none' at first until a function makes them appear.*/
+    #img1 {
+        display: none;
+        position: absolute;
+        right: 150px;
+        width: 230px;
+        height: 300px;
+        rotate: 5deg;
+    }
+    #img2 {
+        display: none;
+        position: absolute;
+        right: 650px;
+        width: 400px;
+        height: 300px;
+        rotate: -5deg;
+    }
+    #img3 {
+        display: none;
+        position: absolute;
+        right: 150px;
+        width: 250px;
+        height: 350px;
+        rotate: -5deg;
+    }
+    #img4 {
+        display: none;
+        position: absolute;
+        right: 650px;
+        width: 250px;
+        height: 300px;
+        rotate: 5deg;
+    }
+    #img5 {
+        display: none;
+        position: absolute;
+        right: 150px;
+        width: 250px;
+        height: 300px;
+        rotate: 5deg;
+    }
+    #img6 {
+        display: none;
+        position: absolute;
+        right: 650px;
+        width: 250px;
+        height: 300px;
+        rotate: -5deg;
+    }
+    #img7 {
+        display: none;
+        position: absolute;
+        left: 20px;
+        width: 350px;
+        height: 270px;
+        rotate: -5deg;
+    }
+    #img8 {
+        display: none;
+        position: absolute;
+        left: 630px;
+        width: 330px;
+        height: 300px;
+        rotate: 5deg;
+    }
+    #img9 {
+        display: none;
+        position: absolute;
+        left: 20;
+        width: 320px;
+        height: 300px;
+        rotate: 5deg;
+    }
+    #img10 {
+        display: none;
+        position: absolute;
+        left: 630px;
+        width: 350px;
+        height: 300px;
+        rotate: -5deg;
+    }
+    #img11 {
+        display: none;
+        position: absolute;
+        left: 70px;
+        width: 250px;
+        height: 300px;
+        rotate: -5deg;
+    }
+    #img12 {
+        display: none;
+        position: absolute;
+        left: 630px;
+        width: 340px;
+        height: 300px;
+        rotate: 5deg;
+    }
+    /*Makes changes to the titles of destinations.*/
+    p.regular {
+        position: absolute;
+        font-family: 'Trebuchet MS';
+        font-size: 80px;
+        float:left;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white; 
+    }
+    /*Makes changes to the text within the info boxes.*/
+    p.small {
+        position: absolute;
+        font-family: 'Trebuchet MS';
+        font-size: 30px;
+        color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: orangered;
+    }
+    /*Defines the absolute positioning of the title texts.*/
+    #p1 {
+        left: 140px;
+    }
+    #p2 {
+        left: 85px;
+    }
+    #p3 {
+        left: 120px;
+    }
+    #p4 {
+        right: 170px;
+    }
+    #p5 {
+        right: 120px;
+    }
+    #p6 {
+        font-size: 60px;
+        right: 90px;
+        top: 2380px;
+    }
+    .image {
+        position: absolute;
+        right: 310px;
+        bottom: 10px;
+        height: 60px;
+        width: 200px;
+        border-radius: 25%;
+    }
+    /*Properties for the hover elements within the destination title boxes.*/
+    .hover {
+        height: 50px;
+        width: 150px;
+        background-color: white;
+        border-radius: 25%;
+        position: absolute;
+    }
+    /*Absolute positioning specific to each individual element.*/
+    #hover1 {
+        top: 715px;
+        left: 175px;
+    }
+    #hover2 {
+        top: 1015px;
+        left: 175px;
+    }
+    #hover3 {
+        top: 1315px;
+        left: 175px;
+    }
+    #hover4 {
+        top: 1775px;
+        right: 175px;
+    }
+    #hover5 {
+        top: 2075px;
+        right: 175px;
+    }
+    #hover6 {
+        top: 2375px;
+        right: 175px;
+    }
+    /*Defines the text stating the hover elements may take a couple seconds to load.*/
+    h2 {
+        color:orangered;
+        text-align: center;
+        font-size: 60px;
+        font-family: 'Trebuchet MS';
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+    }
+</style>
+<script>
+    /*All functions in this <script> serve as gateways to the functions external JavaScript page.*/
+    /*They each decide which function to direct the action to, whether the element is visible or invisible.*/
+    /*This function determines the function actions for hovering over a hover element within the title text boxes.*/
+    /*This function works and tests for all 6 title boxes and directs to appear() or disappear() based on its visibility, determined by index.*/
+    function firstBoxDecider(index) {
+        let boxIndex = index;
+        if(boxIndex == 1)
+        {
+            if(document.getElementById("infoBox1").style.display == 'none')
+            {
+                appear(boxIndex);
+            }
+            else
+            {
+                disappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 2)
+        {
+            if(document.getElementById("infoBox2").style.display == 'none')
+            {
+                appear(boxIndex);
+            }
+            else
+            {
+                disappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 3)
+        {
+            if(document.getElementById("infoBox3").style.display == 'none')
+            {
+                appear(boxIndex);
+            }
+            else
+            {
+                disappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 4)
+        {
+            if(document.getElementById("infoBox4").style.display == 'none')
+            {
+                appear(boxIndex);
+            }
+            else
+            {
+                disappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 5)
+        {
+            if(document.getElementById("infoBox5").style.display == 'none')
+            {
+                appear(boxIndex);
+            }
+            else
+            {
+                disappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 6)
+        {
+            if(document.getElementById("infoBox6").style.display == 'none')
+            {
+                appear(boxIndex);
+            }
+            else
+            {
+                disappear(boxIndex);
+            }
+        }
+    }
+    /*This function decides what function to send the action two when the image button is clicked.*/
+    /*Decision is decided based on if the images are visible or not, determined by index.*/
+    function secondBoxDecider(index)
+    {
+        let boxIndex = index;
+        if(boxIndex == 1)
+        {
+            if(document.getElementById("img1").style.display == 'none' && document.getElementById("img2").style.display == 'none')
+            {
+                imageAppear(boxIndex);
+            }
+            else
+            {
+                imageDisappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 2)
+        {
+            if(document.getElementById("img3").style.display == 'none' && document.getElementById("img4").style.display == 'none')
+            {
+                imageAppear(boxIndex);
+            }
+            else
+            {
+                imageDisappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 3)
+        {
+            if(document.getElementById("img5").style.display == 'none' && document.getElementById("img6").style.display == 'none')
+            {
+                imageAppear(boxIndex);
+            }
+            else
+            {
+                imageDisappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 4)
+        {
+            if(document.getElementById("img7").style.display == 'none' && document.getElementById("img8").style.display == 'none')
+            {
+                imageAppear(boxIndex);
+            }
+            else
+            {
+                imageDisappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 5)
+        {
+            if(document.getElementById("img9").style.display == 'none' && document.getElementById("img10").style.display == 'none')
+            {
+                imageAppear(boxIndex);
+            }
+            else
+            {
+                imageDisappear(boxIndex);
+            }
+        }
+        else if(boxIndex == 6)
+        {
+            if(document.getElementById("img11").style.display == 'none' && document.getElementById("img12").style.display == 'none')
+            {
+                imageAppear(boxIndex);
+            }
+            else
+            {
+                imageDisappear(boxIndex);
+            }
+        }
+    }
+</script>
+<body>
+    <!--Nav tag links that bring user to the link's corresponding page (defined in external CSS).-->
+    <nav>
+        <a href="../index/index.html">HOME</a>
+        |
+        <a href="../hobbies/hobbies.html">HOBBIES</a>
+        |
+        <a href="../events/events.html">EVENTS/HISTORY</a>
+        |
+        <a href="../photos/photos.html">PHOTOS AND VIDEOS</a>
+        |
+        <a href="../places/places.html">PLACES I'VE TRAVELED</a>
+        |
+        <a href="../christian/christian.html">CHRISTIAN WORLDVIEW</a>
+        |
+        <a href="../contact/contact.html">CONTACT INFO</a>
+    </nav>
+    <!--Title of the website, emojis, and title images that are each defined in the external CSS file.-->
+    <h1><img class="specific" id="place1" src="japan7.jpg" alt="Japan Background">&#128508 My Places I've Traveled To and Want to Travel To &#127757
+    <img class="specific" id="place2" src="nature3.jpg" alt="Mountain Background"></h1>
+    <!--Title and text below the main title of the page.-->
+    <h2>Places I've Traveled To</h2>
+    <h3 style="font-size:25px;color:orangered">- May take a few seconds for the hover to work!</h3>
+    <!--Lists that include the title text box, the info box, and images corresponding to each trip destination described in this page.-->
+    <!--Organizes each section with certain different properties.-->
+    <ul>
+        <!--Div element that includes the title and hover element that calls the operation of functions when acted on.-->
+        <!--The row and regular classes determines the properties for those elements.-->
+        <div class="row">
+            <!--Titles include ids for specific positioning.-->
+            <p class="regular" id="p1">Japan</p>
+            <!--Inline CSS for the hover element.-->
+            <button style="font-size:20px;animation:none" class="hover" id="hover1" onmouseover="firstBoxDecider(1)">Hover to see info!</button>
+        </div>
+        <!--Info boxes include ids for location and size.-->
+        <div class="row" id="infoBox1">
+            <!--Small class determines smaller text.-->
+            <p class="small" id="p7">- I traveled around Japan during June 2024. We <br> explored around Tokyo, Osaka, Kyoto, and Kamakura.<br>Here are 
+            pictures of the Tokyo Skytree Tower and the Arashiyama Bamboo Forest.</p>
+            <!--Image class for image size, and ids for location.-->
+            <button style="font-size:20px;animation:none" class="image" id="image1" onclick="secondBoxDecider(1)">Click for Images</button>
+        </div>
+        <!--Images consisting of the file and alt names.-->
+        <img id="img1" src="japan3.jpg" alt="Tokyo Skytree">
+        <img id="img2" src="japan9.jpg" alt="Japan Bamboo Forest">
+        
+    </ul>
+    <br>
+    <!--Same comments apply to all code below this that are within unordered lists, as they perform the same actions and functions for each section.-->
+    <ul>
+        <div class="row">
+            <p class="regular" id="p2">Yosemite</p>
+            <button style="font-size:20px;animation:none" class="hover" id="hover2" onmouseover="firstBoxDecider(2)">Hover to see info!</button>
+        </div>
+        <div class="row" id="infoBox2">
+            <p class="small" id="p8">- I traveled with my family to Yosemite some time <br>during elementary school (around 10 years ago). Here are 
+            pictures of the Half Dome and Waterfall at Yosemite National Park.</p>
+            <button style="font-size:20px;animation:none" class="image" id="image2" onclick="secondBoxDecider(2)">Click for Images</button>
+        </div>
+        <img id="img3" src="yosemitehalfdome.jpg" alt="Yosemite Half Dome">
+        <img id="img4" src="yosemitewaterfall.jpg" alt="Yosemite Waterfall">
+    </ul>
+    <br>
+    <ul>
+        <div class="row">
+            <p class="regular" id="p3">Cancun</p>
+            <button style="font-size:20px;animation:none" class="hover" id="hover3" onmouseover="firstBoxDecider(3)">Hover to see info!</button>
+        </div>
+        <div class="row" id="infoBox3">
+            <p class="small" id="p9">- With my parents, I traveled to Cancun during the <br>summer of 2018. A couple of my favorite things we did there
+            (as shown in the images) were going to the Xcaret waterpark and traveling around the city.</p>
+            <button style="font-size:20px;animation:none" class="image" id="image3" onclick="secondBoxDecider(3)">Click for Images</button>
+        </div>
+        <img id="img5" src="cancuncity.jpg" alt="Cancun City">
+        <img id="img6" src="cancunxcaret.jpg" alt="Cancun Xcaret">
+    </ul>
+    <br>
+    <h2>Places I Want to Travel To</h2>
+    <ul>
+        <div class="row2">
+            <p class="regular" id="p4">Italy</p>
+            <button style="font-size:20px;animation:none" class="hover" id="hover4" onmouseover="firstBoxDecider(4)">Hover to see info!</button>
+        </div>
+
+        <div class="row" id="infoBox4">
+            <p class="small" id="p10">- In Italy, I want to travel to the main cities such as <br>Venice, Rome, Florence, Milan and more. Two things
+            I definitely want to visit are the Colosseum and the rivers <br>in Venice.
+            </p>
+            <button style="font-size:20px;animation:none" class="image" id="image4" onclick="secondBoxDecider(4)">Click for Images</button>
+        </div>
+        <img id="img7" src="italycolosseum.jpg" alt="Italy Colosseum">
+        <img id="img8" src="italyvenice.jpg" alt="Italy City of Venice">
+    </ul>
+    <br>
+    <ul>
+        <div class="row2">
+            <p class="regular" id="p5">Greece</p>
+            <button style="font-size:20px;animation:none" class="hover" id="hover5" onmouseover="firstBoxDecider(5)">Hover to see info!</button>
+        </div>
+
+        <div class="row" id="infoBox5">
+            <p class="small" id="p11">- Greece is one of the top destinations in my wishlist. It has fantastic scenery and landmarks such as 
+            Parthenon <br>and its numerous gorgeous beaches.
+            </p>
+            <button style="font-size:20px;animation:none" class="image" id="image5" onclick="secondBoxDecider(5)">Click for Images</button>
+        </div>
+        <img id="img9" src="greececoast.jpg" alt="Greece Coast">
+        <img id="img10" src="greecetemple.jpg" alt="Greece Temple">
+    </ul>
+    <br>
+    <ul>
+        <div class="row2">
+            <p class="regular" id="p6">South Africa</p>
+            <button style="font-size:20px;animation:none" class="hover" id="hover6" onmouseover="firstBoxDecider(6)">Hover to see info!</button>
+        </div>
+
+        <div class="row" id="infoBox6">
+            <p class="small" id="p12">- I really want to go to South Africa because of their beautiful beaches, numerous hiking locations, 
+            and unbeatable safari destinations full of animals such as <br>lions, cheetahs, and elephants.
+            </p>
+            <button style="font-size:20px;animation:none" class="image" id="image6" onclick="secondBoxDecider(6)">Click for Images</button>
+        </div>
+        <img id="img11" src="southafricabeach.webp" alt="South Africa Beach">
+        <img id="img12" src="southafricasafari.jpg" alt="South Africa Safari">
+    </ul>
+    <br>
+    <!--Allows the user to navigate back to the home page by clicking; uses an external JavaScript function.-->
+    <div align="center">
+        <button onclick="buttons()" style="font-size: 30px; width: 350px; height: 100px;">Go Back Home</button>
+    </div>
+</body>
+</html>

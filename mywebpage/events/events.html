@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metatags containing charset, viewport, webpage description, keywords, and author along with the webpage title.-->
+    <!--Includes imports of the mainelements CSS page and the functions JavaScript page.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All About Jacob Sanchez">
+    <meta name="keywords" content="Events">
+    <meta name="author" content="Jacob Sanchez">
+    <meta name="revised" content="9/24/2024">
+    <meta name="position" content="1">
+    <title>Events</title>
+    <link rel="stylesheet" type="text/css" href="/mywebpage/mainelements.css">
+    <script src="/mywebpage/functions.js"></script>
+    <!--Internal CSS that styles h3, h2, .flex-container, button, and hovering over buttons on this page.-->
+    <style>
+        /*Changes properties depending on the heading tag. H2 aligns center.*/
+        h3 {
+            font-family:'Trebuchet MS';
+            font-size:30px; 
+            color:orangered;
+        }
+        h2 {
+            font-family:'Trebuchet MS';
+            font-size:40px; 
+            color:orangered;
+            text-align:center;
+        }
+        /*Uses Flexbox for all elements that contain this class (indicated by '.').*/
+        .flex-container {
+            display: flex;
+        }
+        /*Changes button properties for this page, and works with button:hover below to create a transition where when the button is hovered over,
+        the button will become bigger and have an orangered background.*/
+        button {
+            width: 300px;
+            height: 150px;
+            transition: width 0.5s, height 0.5s;
+            font-size: 20px;
+        }
+        button:hover {
+            width: 400px;
+            height: 200px;
+            background-color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <!--Nav tag links that bring user to the link's corresponding page (defined in external CSS).-->
+    <nav>
+        <a href="../index/index.html">HOME</a>
+        |
+        <a href="../hobbies/hobbies.html">HOBBIES</a>
+        |
+        <a href="../events/events.html">EVENTS/HISTORY</a>
+        |
+        <a href="../photos/photos.html">PHOTOS AND VIDEOS</a>
+        |
+        <a href="../places/places.html">PLACES I'VE TRAVELED</a>
+        |
+        <a href="../christian/christian.html">CHRISTIAN WORLDVIEW</a>
+        |
+        <a href="../contact/contact.html">CONTACT INFO</a>
+    </nav>
+    <!--Title of the website, emojis, and title images that are each defined in the external CSS file.-->
+    <h1><img class="specific" id="event1" src="izzymean.jpg" alt="My Dog">&#128054 More About My Events &#127891<img class="specific" id="event2"
+    src="meandgcu.jpg" alt="Me 3"></h1>
+    <h3>- Hover over these boxes to get a reaction!</h3>
+    <h2>Childhood</h2>
+    <!--Defined with internal CSS above and applies Flexbox to keep each button on the same line.-->
+    <!--DIV elements containing buttons that describe each event from my childhood, highschool, and college/future.-->
+    <!--Created 3 individual DIV elements to add breaks in between each and new lines for organization.-->
+    <div class="flex-container">
+        <button>I am an only child who lived with my mom and dad before college. I am from Orange County, California.</button>
+        <button>My family currently has one dog named Izzy, but we have had 1 dog, four cats, and a handful of goldfish in the past.</button>
+        <button>I enjoyed playing <u>baseball</u> from ages 6-16, and I still enjoy watching the game as it's my favorite sport.</button>
+        <button>I also played sports in my childhood such as flag football, basketball, and track and field.</button>
+        <button>I went to a private school up to 8th grade, other than college.</button>
+        <button>I excelled in school, participating in spelling bees, math & science olympics, and speech meets.</button>
+    </div>
+    <br>
+    <h2>High School</h2>
+    <div class="flex-container">
+        <button>I attended Villa Park High School for all 4 years I was in highschool.</button>
+        <button>I participated in their baseball program for 2 seasons and various events.</button>
+        <button>During my junior and senior year, I worked at a Chipotle near my house as my first work experience.</button>
+        <button>I took various computer related classes, but didn't get much hands-on experience at this point in my life.</button>
+        <button>I maintained academic success and achieved credit from various AP classes.</button>
+        <button>I got a girlfriend my senior year and attended prom with her; we are together to this day.</button>
+    </div>
+    <br>
+    <h2>College/Future</h2>
+    <div class="flex-container">
+        <button>I am currently attending Grand Canyon University with a Major in Software Development.</button>
+        <button>This semester-long project is from my freshman class, Introduction to Web Development.</button>
+        <button>I am currently involved in two clubs as well as a research program and plan to get involved more.</button>
+        <button>I plan to take part in summer internships each summer to improve my knowledge and experience.</button>
+        <button>I am set on joining the technology industry in hopes of getting a well-rounded and well-paying job.</button>
+        <button>I want to make a change in this world with my primary goal being to provide convenience to as many people as possible throughout 
+        my life.</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!--Center aligned <div> tag containing a button that navigates the user back to the home page, using an external JavaScript function.-->
+    <div align="center">
+        <button onclick="buttons()" style="font-size: 30px; width: 350px; height: 100px;">Go Back Home</button>
+    </div>
+</body>
+</html>

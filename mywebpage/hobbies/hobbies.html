@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metatags containing charset, viewport, webpage description, keywords, and author along with the webpage title.-->
+    <!--Includes imports of the mainelements CSS page and the functions JavaScript page.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All About Jacob Sanchez">
+    <meta name="keywords" content="Hobbies">
+    <meta name="author" content="Jacob Sanchez">
+    <meta name="revised" content="9/24/2024">
+    <meta name="position" content="1">
+    <title>Jacob's Hobbies</title>
+    <link rel="stylesheet" type="text/css" href="/mywebpage/mainelements.css">
+    <script src="/mywebpage/functions.js"></script>
+    <!--Internal CSS that styles h3s and ps in this page.-->
+    <style>
+        /*Aligns h3 text left with a designated font-family, size, and color.*/
+        h3 {font-family:'Trebuchet MS'; 
+        text-align:left; 
+        font-size:20px; 
+        color:orangered;}
+        /*Changes font-size by the paragraph's specific class (for the table paragraphs).*/
+        p.heading {
+            font-size: 20px;
+        }
+
+        p.cell {
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!--Nav tag links that bring user to the link's corresponding page (defined in external CSS).-->
+    <nav>
+        <a href= "../index/index.html">HOME</a>
+        |
+        <a href="../hobbies/hobbies.html">HOBBIES</a>
+        |
+        <a href="../events/events.html">EVENTS/HISTORY</a>
+        |
+        <a href="../photos/photos.html">PHOTOS AND VIDEOS</a>
+        |
+        <a href="../places/places.html">PLACES I'VE TRAVELED</a>
+        |
+        <a href="../christian/christian.html">CHRISTIAN WORLDVIEW</a>
+        |
+        <a href="../contact/contact.html">CONTACT INFO</a>
+    </nav>
+    <!--Title of the website, emojis, and title images that are each defined in the external CSS file.-->
+    <h1><img class="specific" id="hobby1" src="setup.jpg" alt="Computer Setup">&#127925 More About My Hobbies &#127947<img class="specific" 
+    id="hobby2" src="codenames.webp" alt="CodeNames"></h1>
+    <!--Aligns everything center that's within the <div> tag.-->
+    <div align="center">
+        <!--Table that contains all information about my hobbies. The table, each table heading, row, and cell are defined in external CSS file. 
+        Each hobby includes a short description describing that specific hobby.-->
+        <table>
+            <!--Text is defined with internal CSS above under p.heading class.-->
+            <tr>
+                <th>Physical Hobbies<br><p class="heading">- Hobbies that require physical<br> motion</p></th>
+                <th>Mental/Educational Hobbies<br><p class="heading">- Hobbies that require more thought or<br> mental breaks</p></th>
+                <th>Social Hobbies<br><p class="heading">- Hobbies that involve social<br> interaction and connection</p></th>
+            </tr>
+            <!--Text is defined with internal CSS above under p.cell class.-->
+            <tr>
+                <td><b>Watching/Playing baseball</b><br><p class="cell">- Baseball is the main sport I love, and each year I follow<br> 
+                it and keep up with the latest news. I play it whenever<br> there's opportunities.</p></td>
+                <td><b>Learning and practicing programming</b><br><p class="cell">- For my career I want to get into programming and 
+                back-end<br>development, so in my free time I learn and practice my skills<br> to help make myself more efficient.</p></td>
+                <td><b>Calling my girlfriend</b><br><p class="cell">- Everyday I like to call her, and we usually talk about our day
+                <br> and plan when we next see each other since we're long distance.</p></td>
+            </tr>
+            <tr>
+                <td><b>Working out</b><br><p class="cell">- Around 4-5 times a week, I like to go to the gym and weight<br> lift. I use 
+                what's called a push-pull-legs workout routine,<br> and I use creatine for post-workouts.</p></td>
+                <td><b>Video games</b><br><p class="cell">- Occasionally, I'll play online games with people or just on<br> my own.
+                </p></td>
+                <td><b>Hanging out with people</b><br><p class="cell">- Everyday, I meet up with people and hang out with them. This
+                <br>hobby especially is a big part of my life.</p></td>
+            </tr>
+            <tr>
+                <td><b>Bike riding</b><br><p class="cell">- When I'm not using my electric scooter, I like to bike ride<br> for 
+                exercise and for my entertainment. My ideal choice<br> of transportation other than by car.</p></td>
+                <td><b>Listening to music</b><br><p class="cell">- Music is essential for me to go about my day because it can<br> just 
+                be so inspiring and relatable to you, and it never gets boring.</p></td>
+                <td><b>Life groups</b><br><p class="cell">- At GCU, within our dorm halls there are life groups which<br> essentially 
+                serve as bible study groups that allow you to connect<br> with your neighbors more spiritually.</p></td>
+            </tr>
+            <tr>
+                <td><b>Playing board games</b><br><p class="cell">- While hanging out with friends or family, I enjoy challenging<br> 
+                them to a board game, typically ones that require technique<br> and strategy.</p></td>
+                <td><b>Scrolling social media</b><br><p class="cell">- I enjoy this hobby during breaks throughout my day or to check
+                <br> out of life for a little bit, especially during study sessions.</p></td>
+                <td><b>Church</b><br><p class="cell">- At home, I would attend Cornerstone Church in Anaheim, CA<br> every Sunday as 
+                well as volunteer to serve there for the kids and<br> youth ministry.</p></td>
+            </tr>
+        </table>
+    </div>
+    <!--Heading containing the titles for each video displayed below.-->
+    <h3>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Favorite sport: Baseball&ensp;&ensp;&ensp;&ensp;
+    &ensp;&ensp;&ensp;&ensp;&ensp;Most used hobby: Listening to music & calling my girlfriend &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Favorite physical 
+    activity: Working out</h3>
+    <!--Allows the videos to be displayed on the same line rather than in a column.-->
+    <!--Each video is displayed using <iframe> by embedding the videos off of Youtube. They are all adjusted by height and width.-->
+    <div float:"none">
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <iframe width="415" height="225" src="https://www.youtube.com/embed/NbDmAPife-s?si=iEbzxVdGVFLBVvB0" title="YouTube video player" 
+        frameborder="0" allow="accelerometer;autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        &ensp;&ensp;&ensp;&ensp;
+        <iframe width="415" height="225" src="https://www.youtube.com/embed/w55a7XECKwA?si=OhXzhuLTh-LCU9vp" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        &ensp;&ensp;&ensp;&ensp;
+        <iframe width="415" height="225" src="https://www.youtube.com/embed/HQfF5XRVXjU?si=U4GotSEdyJVQnGA0" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <br>
+    <!--Center aligned <div> tag containing a button that navigates the user back to the home page, uses an external JavaScript function.-->
+    <div align="center">
+        <button onclick="buttons()">Go Back Home</button>
+    </div>
+</body>
+</html>

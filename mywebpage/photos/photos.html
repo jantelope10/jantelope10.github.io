@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metatags containing charset, viewport, webpage description, keywords, and author along with the webpage title.-->
+    <!--Includes imports of the mainelements CSS page and the functions JavaScript page.-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All About Jacob Sanchez">
+    <meta name="keywords" content="Photos and Videos">
+    <meta name="author" content="Jacob Sanchez">
+    <meta name="revised" content="9/24/2024">
+    <meta name="position" content="1">
+    <title>Photos and Videos</title>
+    <link rel="stylesheet" type="text/css" href="/mywebpage/mainelements.css">
+    <script src="/mywebpage/functions.js"></script>
+    <!--A giant internal CSS container that allows the title to have a blink pattern, each photo booth section to blink, board properties, 
+    properties for h3, each individual image, each photo booth section tag, and each dot located at the top of each individual image to act as a 
+    thumbtack design.-->
+    <style>
+        /*Allows the photo booth title to blink these specific colors in a pattern infinitely.*/
+        @keyframes titleBlink {
+            0% {
+                color: rgb(248, 44, 44);
+            }
+            25% {
+                color:rgb(41, 222, 250);
+            }
+            50% {
+                color:rgb(228, 248, 44);
+            }
+            75% {
+                color:rgb(221, 44, 248);
+            }
+            100% {
+                color:rgb(248, 44, 44);
+            }
+        }
+        /*Allows the photo booth section tags to blink white and its original color infinitely.*/
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                color: white;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*Defines the board's border, size, rounded-edges, background image, and alignment.*/
+        .board {
+            border: 5px solid white;
+            margin: auto;
+            background-image: url("bulletin2.jpg");
+            width: 1500px;
+            height: 1500px;
+            border-radius: 10%;
+            text-align: center;
+        }
+        /*Photo booth title that utilizes the titleBlink program and determines size and family.*/
+        h3 {
+            font-size: 50px;
+            font-family: Georgia;
+            animation: titleBlink 4s infinite;
+        }
+        /*Each individual image using ids (indicated using '#') to determine its placement on the board using absolute positioning; uses rotation
+        for aesthetic.*/
+        #img1 {
+            float:none;
+            width:120px;
+            height:170px;
+            position: absolute;
+            left: 200px;
+            top: 380px;
+            rotate: 20deg;
+        }
+        #img2 {
+            float:none;
+            width:160px;
+            height:220px;
+            position: absolute;
+            left: 80px;
+            top: 730px;
+            rotate: -15deg;
+        }
+        #img3 {
+            float:none;
+            width:260px;
+            height:400px;
+            position: absolute;
+            left: 450px;
+            top: 470px;
+            rotate: -10deg;
+        }
+        #img4 {
+            float:none;
+            width:160px;
+            height:240px;
+            position: absolute;
+            left: 150px;
+            top: 1000px;
+            rotate: 10deg;
+        }
+        #img5 {
+            float:none;
+            width:130px;
+            height:180px;
+            position: absolute;
+            left: 300px;
+            top: 730px;
+            rotate: 5deg;
+        }
+        #img6 {
+            float:none;
+            width:90px;
+            height:120px;
+            position: absolute;
+            left: 400px;
+            top: 350px;
+            rotate: -5deg;
+        }
+        #img7 {
+            float:none;
+            width:320px;
+            height:200px;
+            position: absolute;
+            right: 200px;
+            top: 360px;
+            rotate: -5deg;
+        }
+        #img8 {
+            float:none;
+            width:240px;
+            height:150px;
+            position: absolute;
+            right: 50px;
+            top: 710px;
+            rotate: 5deg;
+        }
+        #img9 {
+            float:none;
+            width:210px;
+            height:130px;
+            position: absolute;
+            right: 580px;
+            top: 470px;
+            rotate: -10deg;
+        }
+        #img10 {
+            float:none;
+            width:150px;
+            height:190px;
+            position: absolute;
+            right: 400px;
+            top: 630px;
+            rotate: -5deg;
+        }
+        #img11 {
+            float:none;
+            width:180px;
+            height:230px;
+            position: absolute;
+            right: 300px;
+            top: 890px;
+            rotate: 10deg;
+        }
+        #img12 {
+            float:none;
+            width:200px;
+            height:280px;
+            position: absolute;
+            left: 370px;
+            top: 1500px;
+            rotate: -10deg;
+        }
+        #img13 {
+            float:none;
+            width:190px;
+            height:260px;
+            position: absolute;
+            left: 350px;
+            top: 1200px;
+            rotate: 10deg;
+        }
+        #img14 {
+            float:none;
+            width:160px;
+            height:210px;
+            position: absolute;
+            left: 90px;
+            top: 1270px;
+            rotate: -5deg;
+        }
+        #img15 {
+            float:none;
+            width:130px;
+            height:200px;
+            position: absolute;
+            left: 150px;
+            top: 1610px;
+            rotate: 5deg;
+        }
+        #img16 {
+            float:none;
+            width:120px;
+            height:180px;
+            position: absolute;
+            right: 500px;
+            top: 1630px;
+            rotate: -5deg;
+        }
+        #img17 {
+            float:none;
+            width:150px;
+            height:230px;
+            position: absolute;
+            right: 450px;
+            top: 1200px;
+            rotate: -10deg;
+        }
+        #img18 {
+            float:none;
+            width:190px;
+            height:270px;
+            position: absolute;
+            right: 50px;
+            top: 1150px;
+            rotate: 5deg;
+        }
+        #img19 {
+            float:none;
+            width:190px;
+            height:270px;
+            position: absolute;
+            right: 570px;
+            top: 880px;
+            rotate: 5deg;
+        }
+        #img20 {
+            float:none;
+            width:130px;
+            height:180px;
+            position: absolute;
+            right: 280px;
+            top: 1620px;
+            rotate: 5deg;
+        }
+        #img21 {
+            float:none;
+            width:110px;
+            height:150px;
+            position: absolute;
+            right: 100px;
+            top: 1620px;
+            rotate: -5deg;
+        }
+        /*Each individual photo booth section tag that defines its border, horizontal display, color, size, family, blink animation, and bordering
+        around each letter for decoration and easier-reading.*/
+        #h41 {
+            border: 4px solid white;
+            display: inline;
+            font-family: 'Trebuchet MS';
+            font-size:80px;
+            color:rgb(248, 44, 44);
+            float:left;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: white;
+            animation: blink 1s infinite;
+        }
+        #h42 {
+            border: 4px solid white;
+            display: inline;
+            font-family: 'Trebuchet MS';
+            font-size:80px;
+            color:rgb(41, 222, 250);
+            float: right;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: white;
+            animation: blink 1s infinite;
+        }
+        #h43 {
+            border: 4px solid white;
+            display: inline;
+            font-family: 'Trebuchet MS';
+            font-size:80px;
+            color:rgb(228, 248, 44);
+            float:left;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: white;
+            animation: blink 1s infinite;
+        }
+        #h44 {
+            border: 4px solid white;
+            display: inline;
+            font-family: 'Trebuchet MS';
+            font-size:80px;
+            color:rgb(221, 44, 248);
+            float:right;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: white;
+            animation: blink 1s infinite;
+        }
+        /*Used among all dots on this page to determine size, color, and shape.*/
+        .dot {
+            height: 25px;
+            width: 25px;
+            background-color: rgb(91, 47, 6);
+            border-radius: 50%;
+            border: 3px solid rgb(241, 196, 145);
+            position: absolute;
+        }
+        /*Each individual dot using ids to determine its absolute positioning on an image.*/
+        #dot1 {
+            left: 270px;
+            top: 388px;
+        }
+        #dot2 {
+            left: 120px;
+            top: 740px;
+        }
+        #dot3 {
+            left: 540px;
+            top: 500px;
+        }
+        #dot4 {
+            left: 230px;
+            top: 1010px;
+        }
+        #dot5 {
+            left: 500px;
+            top: 940px;
+        }
+        #dot6 {
+            left: 360px;
+            top: 735px;
+        }
+        #dot7 {
+            left: 425px;
+            top: 355px;
+        }
+        #dot8 {
+            right: 360px;
+            top: 370px;
+        }
+        #dot9 {
+            right: 140px;
+            top: 715px;
+        }
+        #dot10 {
+            right: 690px;
+            top: 480px;
+        }
+        #dot11 {
+            right: 475px;
+            top: 635px;
+        }
+        #dot12 {
+            right: 360px;
+            top: 900px;
+        }
+        #dot13 {
+            left: 430px;
+            top: 1510px;
+        }
+        #dot14 {
+            left: 450px;
+            top: 1210px;
+        }
+        #dot15 {
+            left: 150px;
+            top: 1275px;
+        }
+        #dot16 {
+            left: 205px;
+            top: 1615px;
+        }
+        #dot17 {
+            left: 685px;
+            top: 1210px;
+        }
+        #dot18 {
+            left: 725px;
+            top: 1560px;
+        }
+        #dot19 {
+            right: 550px;
+            top: 1640px;
+        }
+        #dot20 {
+            right: 530px;
+            top: 1210px;
+        }
+        #dot21 {
+            right: 120px;
+            top: 1160px;
+        }
+        #dot22 {
+            right: 640px;
+            top: 890px;
+        }
+        #dot23 {
+            right: 330px;
+            top: 1630px;
+        }
+        #dot24 {
+            right: 170px;
+            top: 1630px;
+        }
+        /*Videos located on the board that determine its size, absolute positioning, and rotation.*/
+        #vid1 {
+            position: absolute;
+            width: 320px;
+            height: 240px;
+            left: 370px;
+            top: 900px;
+            rotate: -5deg;
+        }
+        #vid2 {
+            position: absolute;
+            width: 220px;
+            height: 300px;
+            left: 590px;
+            top: 1200px;
+            rotate: 0deg;
+        }
+        #vid3 {
+            position: absolute;
+            width: 200px; 
+            height: 270px;
+            left: 630px;
+            top: 1550px;
+            rotate: 5deg;
+        }
+
+    </style>
+</head>
+<body style=>
+    <nav>
+        <!--Nav tag links that bring user to the link's corresponding page (defined in external CSS).-->
+        <a href="../index/index.html">HOME</a>
+        |
+        <a href="../hobbies/hobbies.html">HOBBIES</a>
+        |
+        <a href="../events/events.html">EVENTS/HISTORY</a>
+        |
+        <a href="../photos/photos.html">PHOTOS AND VIDEOS</a>
+        |
+        <a href="../places/places.html">PLACES I'VE TRAVELED</a>
+        |
+        <a href="../christian/christian.html">CHRISTIAN WORLDVIEW</a>
+        |
+        <a href="../contact/contact.html">CONTACT INFO</a>
+    </nav>
+    <!--Title of the website, emojis, and title images that are each defined in the external CSS file.-->
+    <h1><img class="specific" id="photo1" src="babyme.jpg" alt="Baby Me">&#128248 My Photos and Videos &#127916<img class="specific" id="photo2"
+    src="dbackspose.jpg" alt="Me Dbacks"></h1>
+    <!--A border that surrounds the board and contains properties mentioned with internal CSS above.-->
+    <div class="border">
+        <!--Contains the title and section titles, each image and dot designation, and the styles of each using internal CSS above.-->
+        <div class="board">
+            <h3><u>Photo Booth</u></h3>
+            <h4 id="h41">&ensp;-  Japan&ensp;</h4>
+            <h4 id="h42">&ensp;-  Prom&ensp;</h4>
+            <!--All images and dots located on the board containing the source of the image as well as the alt tag. Properties are in the internal
+            CSS above.-->
+            <img id="img1" src="japan1.jpg" alt="Tokyo Tower">
+            <span class="dot" id="dot1"></span>
+            <img id="img2" src="japan2.jpg" alt="Tokyo Ground View">
+            <span class="dot" id="dot2"></span>
+            <img id="img3" src="japan10.jpg" alt="Japan Arashiyama Bamboo">
+            <span class="dot" id="dot3"></span>
+            <img id="img4" src="japan4.jpg" alt="Japan City View">
+            <span class="dot" id="dot4"></span>
+            <video id="vid1" controls><source src="japanpigs.mp4" type="video/mp4"></video>
+            <span class="dot" id="dot5"></span>
+            <img id="img5" src="japan11.jpg" alt="Japan Me">
+            <span class="dot" id="dot6"></span>
+            <img id="img6" src="japan13.jpg" alt="Japan Deer">
+            <span class="dot" id="dot7"></span>
+            <img id="img7" src="prom1.jpg" alt="Prom 1">
+            <span class="dot" id="dot8"></span>
+            <img id="img8" src="prom2.jpg" alt="Prom 2">
+            <span class="dot" id="dot9"></span>
+            <img id="img9" src="prom3.jpg" alt="Prom 3">
+            <span class="dot" id="dot10"></span>
+            <img id="img10" src="promproposal.jpg" alt="Prom Proposal">
+            <span class="dot" id="dot11"></span>
+            <img id="img11" src="prom4.jpg" alt="Prom 4">
+            <span class="dot" id="dot12"></span>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h4 id="h43">&ensp;-  Pets&ensp;</h4>
+            <h4 id="h44">&ensp;-  Miscellaneous&ensp;</h4>
+
+            <img id="img12" src="mudgie.jpg" alt="Mudgie">
+            <span class="dot" id="dot13"></span>
+            <img id="img13" src="izzy.jpg" alt="Izzy">
+            <span class="dot" id="dot14"></span>
+            <img id="img14" src="mochi.jpg" alt="Mochi">
+            <span class="dot" id="dot15"></span>
+            <img id="img15" src="panda.jpg" alt="Panda">
+            <span class="dot" id="dot16"></span>
+            <video id="vid2" controls><source src="catsfighting.mp4" type="video/mp4"></video>
+            <span class="dot" id="dot17"></span>
+            <video id="vid3" controls><source src="mudgiescare.mp4" type="video/mp4"></video>
+            <span class="dot" id="dot18"></span>
+            <img id="img16" src="nightplane.jpg" alt="Plane View">
+            <span class="dot" id="dot19"></span>
+            <img id="img17" src="gcu1.jpg" alt="GCU Arena">
+            <span class="dot" id="dot20"></span>
+            <img id="img18" src="japan5.jpg" alt="Japan Selfie">
+            <span class="dot" id="dot21"></span>
+            <img id="img19" src="meandherbeach.jpg" alt="Beach">
+            <span class="dot" id="dot22"></span>
+            <img id="img20" src="mudgiemask.jpg" alt="Mudgie Mask">
+            <span class="dot" id="dot23"></span>
+            <img id="img21" src="japan6.jpg" alt="Japan Disney">
+            <span class="dot" id="dot24"></span>
+        </div>
+
+    </div>
+    <br><br><br>
+    <!--Center aligned <div> tag containing a button that navigates the user back to the home page, uses an external JavaScript function.-->
+    <div align="center">
+        <button onclick="buttons()" style="font-size: 30px; width: 350px; height: 100px;">Go Back Home</button>
+    </div>
+</body>
+</html>
